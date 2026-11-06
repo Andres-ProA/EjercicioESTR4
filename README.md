@@ -1,32 +1,47 @@
-# Ejercicio: Registro y Login con Python, MySQL y Bootstrap
+# Sistema de Registro y Login (Python, MySQL y Bootstrap)
 
-## Archivos del Proyecto
+Aplicacion web para el registro y autenticacion de usuarios conectada a una base de datos MySQL.
 
+## Estructura del Proyecto
+
+```text
 EjercicioFrontBackBD/
-│
-├── app.py                 # Conexión MySQL, funciones (guardar, validar) y rutas
-├── database.sql           # Script SQL para crear la base de datos y la tabla en MySQL
-├── requirements.txt       # Librerías necesarias (Flask y mysql-connector-python)
-├── README.md              # Documentación
-│
+├── app.py                 # Servidor Flask, conexion a MySQL y funciones
+├── database.sql           # Script SQL para crear la base de datos y la tabla
+├── requirements.txt       # Dependencias del proyecto
+├── README.md              # Documentacion
 └── templates/
-    ├── login.html         # Pantalla 1: Iniciar Sesión (con validación de credenciales)
-    ├── registro.html      # Pantalla 2: Crear Cuenta (guarda en MySQL)
-    └── home.html          # Pantalla 3: Saludo de bienvenida
+    ├── login.html         # Pantalla de inicio de sesion
+    ├── registro.html      # Pantalla de registro de usuarios
+    └── home.html          # Pantalla principal (bienvenida)
+```
 
-## Cómo Ejecutar
+## Requisitos Previos
 
-1. **Instalar los requerimientos**:
-   Abre una terminal en esta carpeta y ejecuta:
+- Python 3 instalado
+- Servidor MySQL en ejecucion
+
+## Base de Datos
+
+Antes de iniciar la aplicacion, ejecuta el script `database.sql` en tu cliente de MySQL para crear la base de datos `usuarios_app` y la tabla `usuarios`.
+
+Verifica en `app.py` que las credenciales de conexion coincidan con tu entorno local:
+- Host: localhost
+- Usuario: root
+- Password: tu contrasena (por defecto: 1234)
+- Base de datos: usuarios_app
+
+## Instalacion y Ejecucion
+
+1. Instalar las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Iniciar la aplicación**:
+2. Iniciar la aplicacion:
    ```bash
    python app.py
    ```
 
-3. **Abrir en tu navegador**:
-   Entra a:
+3. Abrir en el navegador:
    http://localhost:5000
